@@ -1,0 +1,148 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: blueviolet;
+}
+
+hr {
+    width: 1px;
+    height: 206px;
+    background: #eee;
+    margin-left: 28px;
+    margin-top: 28px;
+    margin-right: 30px;
+}
+
+.container {
+    width: 650px;
+    height: auto;
+    padding: 15px 39.5rem 20px 40px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.item {
+    width: 570px;
+    height: 300px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.wrapper {
+    width: 280px;
+    height: 240px;
+    background: #fff;
+}
+
+
+.wrapper header {
+    width: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 5px;
+    padding: 2px 0;
+}
+
+
+.wrapper header.header-1 {
+    padding-left: 10px;
+}
+
+.wrapper header.header-2 {
+    padding-right: 20px;
+}
+
+.wrapper header .dates {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+header .icons span {
+    font-size: 20px;
+    color: blueviolet;
+    cursor: pointer;
+    user-select: none;
+}
+
+.calendar ul {
+    width: 255px;
+    display: flex;
+    list-style: none;
+    flex-wrap: wrap;
+    text-align: center;
+}
+
+.calendar .weeks {
+    margin-bottom: 6px;
+}
+
+.calendar .weeks li {
+    font-size: 12px;
+    font-weight: 400px;
+    width: 36px;
+    margin-bottom: 2px;
+    display: flex;
+    justify-content: center;
+}
+
+.calendar ul li {
+    position: relative;
+    user-select: none;
+}
+
+.calendar .days li {
+    z-index: 1;
+    cursor: pointer;
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.days li.inactive {
+    color: #aaa;
+}
+
+.days li.active {
+    color: #fff;
+}
+
+.days li.suppress {
+    background: blueviolet;
+    border: none;
+    color: #fff;
+}
+
+.calendar .days li::before {
+    position: absolute;
+    content: '';
+    height: 36px;
+    width: 36px;
+    top: 50%;
+    left: 50%;
+    z-index: -1;
+    transform: translate(-50%, -50%);
+}
+
+.calendar .days li:hover::before {
+    border: 1px solid #eee;
+}
+
+.days li.active::before {
+    background: blueviolet;
+}
